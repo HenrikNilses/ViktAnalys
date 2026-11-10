@@ -14,6 +14,11 @@
 - Keep application state and persistence straightforward. Use browser storage only when appropriate, and handle missing or invalid stored data gracefully.
 - Do not add analytics, external services, or collect personal data unless explicitly requested.
 
+## Security and secrets
+- Never store, commit, log, expose, or hard-code private keys, passwords, access tokens, API keys, or other credentials in source code, configuration, documentation, tests, or repository history.
+- Do not ask users to paste secrets into the repository or a prompt. Use environment variables or an appropriate secret manager for credentials when they are required; ensure secret files are excluded from version control.
+- If a secret is discovered in the repository, do not repeat it or copy it elsewhere. Flag the exposure and recommend revoking/rotating the credential and removing it from tracked files and history as appropriate.
+
 ## Verification
 - Before changing files, inspect the existing project structure and follow its established patterns.
 - Run the checks and tests that the repository already provides. If no test or build setup exists, verify changes with the available browser or static checks and state what could not be run.
